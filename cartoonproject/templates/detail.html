@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<img src="{{cartoon.img.url}}" width="100" height="100"
+{{cartoon.name}}<br>
+{{cartoon.desc}}<br>
+{{cartoon.year}}<br>
+<a class="btn btn-warning" href="{% url 'cartoonapp:update' cartoon.id %}">update</a><br>
+<a class="btn btn-danger" href="{% url 'cartoonapp:delete' cartoon.id %}">delete</a><br>
+
+{% endblock %}
